@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Store</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section id=header>
+        <a href="#"><img id="logo" src="../../assets/icons/logo.png" class="logo" alt="company logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a routerLink="/home" routerLinkActive="list-item-active">Home</a></li>
+                <li><a routerLink="/shop-lists" routerLinkActive="list-item-active">Shop</a></li>
+                <li><a routerLink="/blogs" routerLinkActive="list-item-active">Blog</a></li>
+                <li><a class="active" routerLink="/abouts" routerLinkActive="list-item-active">About</a></li>
+                <li><a routerLink="/contacts" routerLinkActive="list-item-active">Contact</a></li>
+                <li id="lg-bag"><a><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-square-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="page-header" class="blog-header">
+        <h2>We are the leading brand that require no introdcution</h2>
+        <p>Our team is dedicated to serve you the best</p>
+    </section>
+    <section>
+        <h2 style="text-align:center">Our Team</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../../assets/team/t1.jpg" alt="Richard" style="width:40%">
+                    <div class="container">
+                        <h2>Richard Ross</h2>
+                        <p class="title">CEO & Founder</p>
+                        <p>Thinker and brain behing exquisite shopping experience</p>
+                        <p>jane@onlineshoppingstore.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="../../assets/team/t2.jpg" alt="Jane" style="width:40%">
+                    <div class="container">
+                        <h2>Jane Kelly</h2>
+                        <p class="title">Brand Ambassador</p>
+                        <p>Best guide for your shopping experience</p>
+                        <p>jane@onlineshoppingstore.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="../../assets/team/t3.jpg" alt="John" style="width:40%">
+                    <div class="container">
+                        <h2>John Falkner</h2>
+                        <p class="title">Designer</p>
+                        <p>Man who all designs from dream to reality</p>
+                        <p>john@onlineshoppingstore.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
