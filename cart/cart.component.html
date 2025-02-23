@@ -1,0 +1,69 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Store</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section id=header>
+        <a href="#"><img id="logo" src="../../assets/icons/logo.png" class="logo" alt="company logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a routerLink="/home" routerLinkActive="list-item-active">Home</a></li>
+                <li><a routerLink="/shop-lists" routerLinkActive="list-item-active">Shop</a></li>
+                <li><a routerLink="/blogs" routerLinkActive="list-item-active">Blog</a></li>
+                <li><a routerLink="/abouts" routerLinkActive="list-item-active">About</a></li>
+                <li><a routerLink="/contacts" routerLinkActive="list-item-active">Contact</a></li>
+                <li id="lg-bag"><a class="active" routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-square-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <!--<div *ngIf="cartItemDetail">-->
+    <section id="cart" class="section-p1">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Size</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody *ngFor="let cartItemDetail of cartItemDetails; let i = index">
+                <tr>
+                    <td><a href="javascript:void(0)" (click)="removeItem(i)"><img id="removeitem"
+                                src="../../assets/icons/remove.png" class="removeitem" alt="remove item"
+                                style="width: 30px; height: auto;"></a>
+                    </td>
+                    <td><img [src]=cartItemDetail.imgPath width="100%" alt="" class="small-img"></td>
+                    <td>{{cartItemDetail.description}}</td>
+                    <td>{{cartItemDetail.size}}</td>
+                    <td>{{cartItemDetail.price}}</td>
+                    <td>{{cartItemDetail.no_of_items}}</td>
+                    <td>{{cartItemDetail.price * cartItemDetail.no_of_items}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn-normal" type="submit" value="">Book Order</button>
+        <button class="btn-normal" type="button" value="">Go Back To Shop Page</button>
+    </section>
+    <!--</div>-->
+</body>
+
+<script>
+    function removeItem() {
+        console.log("Function to remove row");
+    }
+</script>
